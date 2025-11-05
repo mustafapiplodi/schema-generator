@@ -1,0 +1,58 @@
+{
+  "total": 177,
+  "passed": 174,
+  "failed": 0,
+  "warnings": 3,
+  "categories": {
+    "Schema Definitions": {
+      "passed": 42,
+      "failed": 0,
+      "warnings": 0
+    },
+    "Form Fields": {
+      "passed": 2,
+      "failed": 0,
+      "warnings": 1
+    },
+    "Clear Form": {
+      "passed": 27,
+      "failed": 0,
+      "warnings": 1
+    },
+    "Edge Cases": {
+      "passed": 5,
+      "failed": 0,
+      "warnings": 1
+    },
+    "Array Fields": {
+      "passed": 10,
+      "failed": 0,
+      "warnings": 0
+    },
+    "Required Fields": {
+      "passed": 28,
+      "failed": 0,
+      "warnings": 0
+    },
+    "JSON-LD Validation": {
+      "passed": 32,
+      "failed": 0,
+      "warnings": 0
+    },
+    "Data Types": {
+      "passed": 5,
+      "failed": 0,
+      "warnings": 0
+    },
+    "Export": {
+      "passed": 18,
+      "failed": 0,
+      "warnings": 0
+    },
+    "Performance": {
+      "passed": 5,
+      "failed": 0,
+      "warnings": 0
+    }
+  }
+}

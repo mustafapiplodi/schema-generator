@@ -1,0 +1,333 @@
+{
+  "total": 14,
+  "passed": 14,
+  "failed": 0,
+  "details": {
+    "article": {
+      "success": true,
+      "warnings": [
+        "image is recommended for Article"
+      ],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Build a Schema Markup Generator",
+        "datePublished": "2024-01-15T08:00:00+00:00",
+        "dateModified": "2024-01-20T10:00:00+00:00",
+        "description": "A comprehensive guide to building a schema markup generator with real-time validation.",
+        "author": {
+          "@type": "Person",
+          "name": "John Doe",
+          "url": "https://example.com/author/john-doe"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tech Blog"
+        }
+      }
+    },
+    "product": {
+      "success": true,
+      "warnings": [
+        "image is recommended for Product",
+        "offers is recommended for Product"
+      ],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "iPhone 15 Pro",
+        "description": "The latest iPhone with A17 Pro chip and titanium design.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Apple"
+        },
+        "sku": "IPH15PRO-128-BLU",
+        "gtin": "0190199559871"
+      }
+    },
+    "localBusiness": {
+      "success": true,
+      "warnings": [],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "The Italian Kitchen",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Main Street",
+          "addressLocality": "San Francisco",
+          "addressRegion": "CA",
+          "postalCode": "94102",
+          "addressCountry": "US"
+        },
+        "telephone": "+1-415-555-0123",
+        "priceRange": "$$",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "37.7749",
+          "longitude": "-122.4194"
+        }
+      }
+    },
+    "organization": {
+      "success": true,
+      "warnings": [],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Acme Corporation",
+        "url": "https://example.com",
+        "description": "A leading technology company specializing in innovative solutions.",
+        "telephone": "+1-555-123-4567",
+        "email": "info@example.com",
+        "foundingDate": "2010-01-01"
+      }
+    },
+    "breadcrumb": {
+      "success": true,
+      "warnings": [],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://example.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://example.com/products"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Electronics",
+            "item": "https://example.com/products/electronics"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "iPhone 15",
+            "item": "https://example.com/products/electronics/iphone-15"
+          }
+        ]
+      }
+    },
+    "faq": {
+      "success": true,
+      "warnings": [],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is schema markup?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Schema markup is structured data that helps search engines understand your content better."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I implement schema markup?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can implement schema markup by adding JSON-LD script tags to your HTML pages."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is schema markup required for SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While not required, schema markup can significantly improve your search visibility and CTR."
+            }
+          }
+        ]
+      }
+    },
+    "event": {
+      "success": true,
+      "warnings": [
+        "location is recommended for Event"
+      ],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Web Development Conference 2024",
+        "startDate": "2024-06-15T09:00:00-07:00",
+        "endDate": "2024-06-17T18:00:00-07:00",
+        "eventStatus": "https://schema.org/https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/https://schema.org/OfflineEventAttendanceMode",
+        "url": "https://example.com/conference-2024",
+        "description": "Annual conference for web developers featuring latest trends and technologies."
+      }
+    },
+    "recipe": {
+      "success": true,
+      "warnings": [
+        "recipeIngredient is recommended for Recipe",
+        "recipeInstructions is recommended for Recipe"
+      ],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Recipe",
+        "name": "Classic Chocolate Chip Cookies",
+        "description": "Delicious homemade chocolate chip cookies that are crispy on the outside and soft inside.",
+        "prepTime": "PT15M",
+        "cookTime": "PT12M",
+        "totalTime": "PT27M",
+        "recipeYield": "24 cookies",
+        "recipeCategory": "Dessert",
+        "recipeCuisine": "American",
+        "keywords": "cookies, chocolate chip, baking, dessert"
+      }
+    },
+    "video": {
+      "success": true,
+      "warnings": [],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "How to Create Schema Markup",
+        "description": "Learn how to create and implement schema markup for better SEO.",
+        "thumbnailUrl": "https://example.com/video-thumbnail.jpg",
+        "uploadDate": "2024-01-15T10:00:00Z",
+        "duration": "PT10M30S",
+        "contentUrl": "https://example.com/video.mp4",
+        "embedUrl": "https://example.com/embed/video"
+      }
+    },
+    "howto": {
+      "success": true,
+      "warnings": [
+        "step is recommended for HowTo"
+      ],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Install a Light Fixture",
+        "description": "Step-by-step guide to safely installing a ceiling light fixture.",
+        "totalTime": "PT45M",
+        "estimatedCost": {
+          "@type": "MonetaryAmount",
+          "currency": "USD",
+          "value": {
+            "currency": "USD",
+            "value": "50"
+          }
+        },
+        "supply": [
+          {
+            "@type": "HowToSupply",
+            "name": "Light fixture"
+          },
+          {
+            "@type": "HowToSupply",
+            "name": "Wire connectors"
+          },
+          {
+            "@type": "HowToSupply",
+            "name": "Electrical tape"
+          },
+          {
+            "@type": "HowToSupply",
+            "name": "Voltage tester"
+          }
+        ],
+        "tool": [
+          {
+            "@type": "HowToTool",
+            "name": "Screwdriver"
+          },
+          {
+            "@type": "HowToTool",
+            "name": "Wire stripper"
+          },
+          {
+            "@type": "HowToTool",
+            "name": "Ladder"
+          },
+          {
+            "@type": "HowToTool",
+            "name": "Voltage tester"
+          }
+        ]
+      }
+    },
+    "jobPosting": {
+      "success": true,
+      "warnings": [],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "JobPosting",
+        "title": "Senior Software Engineer",
+        "description": "We are seeking an experienced software engineer to join our growing team.",
+        "datePosted": "2024-01-15",
+        "validThrough": "2024-03-15",
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+          "@type": "Organization"
+        }
+      }
+    },
+    "review": {
+      "success": true,
+      "warnings": [],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "reviewBody": "This product exceeded my expectations. Highly recommended!",
+        "datePublished": "2024-01-15",
+        "itemReviewed": {
+          "@type": "Thing"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "author": {
+          "@type": "Person"
+        }
+      }
+    },
+    "website": {
+      "success": true,
+      "warnings": [],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Tech Blog",
+        "url": "https://example.com",
+        "description": "A blog about technology, programming, and web development.",
+        "inLanguage": "en-US"
+      }
+    },
+    "person": {
+      "success": true,
+      "warnings": [],
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "John Doe",
+        "givenName": "John",
+        "familyName": "Doe",
+        "jobTitle": "Software Engineer",
+        "url": "https://johndoe.com",
+        "email": "john@example.com",
+        "telephone": "+1-555-987-6543",
+        "sameAs": [
+          "https://twitter.com/johndoe",
+          "https://linkedin.com/in/johndoe",
+          "https://github.com/johndoe"
+        ]
+      }
+    }
+  }
+}
