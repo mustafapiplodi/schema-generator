@@ -11,6 +11,7 @@ import { Button } from './ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
 import { DateTimeInput } from './ui/DateTimeInput';
 import { OpeningHoursInput } from './ui/OpeningHoursInput';
+import { DurationInput } from './ui/DurationInput';
 import { HelpCircle, Trash2, Plus, AlertTriangle, CheckCircle2, AlertCircle, XCircle } from 'lucide-react';
 import { validateField, getCharCounterColor } from '../utils/fieldValidation';
 
@@ -173,6 +174,20 @@ export function DynamicFormBuilder({ schema, formData, onChange }) {
             error={validation && validation.status === 'error' ? validation.errors[0] : null}
           />
         );
+
+      case 'Duration':
+        // Check if field name suggests seconds are needed (video duration)
+        const showSeconds = fieldName === 'duration' && schema?.type === 'VideoObject';
+        return (
+          <DurationInput
+            value={value}
+            onChange={(durationValue) => handleChange(fieldName, durationValue)}
+            showSeconds={showSeconds}
+          />
+        );
+
+      case 'Textarea':
+        return <Textarea {...commonProps} rows={fieldDef.rows || 3} maxLength={fieldDef.maxLength} />;
 
       default:
         if (fieldDef.multiline) {

@@ -27,7 +27,43 @@ export function validateSchemaCompliance(schema, schemaDefinition) {
 
   // Check recommended properties (generate warnings)
   schemaDefinition.recommended?.forEach(prop => {
-    if (!schema[prop] || schema[prop] === '') {
+    // Handle nested properties and form-to-schema mappings
+    let hasValue = false;
+
+    // Check direct property
+    if (schema[prop] && schema[prop] !== '') {
+      hasValue = true;
+    }
+
+    // Check common mappings for nested properties (form field -> schema path)
+    if (!hasValue) {
+      // Publisher mappings
+      if (prop === 'publisher_name' && schema.publisher?.name) hasValue = true;
+      if (prop === 'publisher' && schema.publisher?.name) hasValue = true;
+
+      // Author mappings
+      if (prop === 'author_name' && schema.author?.name) hasValue = true;
+      if (prop === 'author' && (schema.author?.name || schema.author)) hasValue = true;
+
+      // Event location mappings
+      if (prop === 'location_name' && schema.location?.name) hasValue = true;
+
+      // JobPosting mappings
+      if (prop === 'hiringOrganization_url' && schema.hiringOrganization?.sameAs) hasValue = true;
+      if (prop === 'jobLocation_city' && schema.jobLocation?.address?.addressLocality) hasValue = true;
+      if (prop === 'jobLocation_region' && schema.jobLocation?.address?.addressRegion) hasValue = true;
+      if (prop === 'jobLocation_country' && schema.jobLocation?.address?.addressCountry) hasValue = true;
+
+      // Product aggregateRating mappings
+      if (prop === 'aggregateRatingValue' && schema.aggregateRating?.ratingValue) hasValue = true;
+      if (prop === 'reviewCount' && schema.aggregateRating?.reviewCount) hasValue = true;
+
+      // LocalBusiness geo mappings
+      if (prop === 'latitude' && schema.geo?.latitude) hasValue = true;
+      if (prop === 'longitude' && schema.geo?.longitude) hasValue = true;
+    }
+
+    if (!hasValue) {
       warnings.push({
         severity: 'warning',
         message: `Missing recommended property: ${prop}`,

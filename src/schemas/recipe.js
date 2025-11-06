@@ -41,27 +41,21 @@ export const recipeSchema = {
     },
     prepTime: {
       label: 'Prep Time',
-      type: 'Text',
+      type: 'Duration',
       recommended: true,
-      placeholder: 'PT15M',
-      help: 'Preparation time in ISO 8601 duration format (e.g., PT15M = 15 minutes, PT1H = 1 hour)',
-      example: 'PT15M (15 minutes)'
+      help: 'Time needed to prepare ingredients and setup'
     },
     cookTime: {
       label: 'Cook Time',
-      type: 'Text',
+      type: 'Duration',
       recommended: true,
-      placeholder: 'PT10M',
-      help: 'Cooking time in ISO 8601 duration format',
-      example: 'PT30M (30 minutes)'
+      help: 'Time needed for actual cooking'
     },
     totalTime: {
       label: 'Total Time',
-      type: 'Text',
+      type: 'Duration',
       recommended: true,
-      placeholder: 'PT25M',
-      help: 'Total time (prep + cook) in ISO 8601 duration format',
-      example: 'PT45M (45 minutes)'
+      help: 'Total time from start to finish (prep + cook)'
     },
     recipeYield: {
       label: 'Recipe Yield',

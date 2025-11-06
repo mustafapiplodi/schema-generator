@@ -164,22 +164,26 @@ export function OpeningHoursInput({ value, onChange, label, required = false }) 
             {/* Time inputs */}
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <Label className="text-xs text-gray-600">Opens</Label>
+                <Label className="text-xs text-gray-600 dark:text-gray-400">⏰ Opens (24-hour)</Label>
                 <Input
                   type="time"
                   value={schedule.opens}
                   onChange={(e) => updateSchedule(schedule.id, 'opens', e.target.value)}
                   className="mt-1"
+                  placeholder="HH:MM"
                 />
+                <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">e.g., 09:00</p>
               </div>
               <div>
-                <Label className="text-xs text-gray-600">Closes</Label>
+                <Label className="text-xs text-gray-600 dark:text-gray-400">⏰ Closes (24-hour)</Label>
                 <Input
                   type="time"
                   value={schedule.closes}
                   onChange={(e) => updateSchedule(schedule.id, 'closes', e.target.value)}
                   className="mt-1"
+                  placeholder="HH:MM"
                 />
+                <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">e.g., 17:00</p>
               </div>
             </div>
 

@@ -112,8 +112,10 @@ export function DateTimeInput({ value, onChange, label, required = false, error 
             value={time}
             onChange={(e) => setTime(e.target.value)}
             className={error ? 'border-red-500' : ''}
+            placeholder="HH:MM"
           />
-          <p className="text-xs text-gray-500 mt-1">Time (24-hour)</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">⏰ Time (24-hour format)</p>
+          <p className="text-xs text-gray-400 dark:text-gray-500">e.g., 14:30 for 2:30 PM</p>
         </div>
 
         {/* Timezone Selector */}
@@ -131,12 +133,12 @@ export function DateTimeInput({ value, onChange, label, required = false, error 
             </SelectContent>
           </Select>
           {autoDetected && timezone === Intl.DateTimeFormat().resolvedOptions().timeZone ? (
-            <p className="text-xs text-green-600 mt-1 flex items-center gap-1">
+            <p className="text-xs text-green-600 dark:text-green-400 mt-1 flex items-center gap-1">
               <span>✓</span>
-              <span>Auto-detected from browser</span>
+              <span>Auto-detected</span>
             </p>
           ) : (
-            <p className="text-xs text-gray-500 mt-1">Timezone</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">🌍 Timezone</p>
           )}
         </div>
       </div>

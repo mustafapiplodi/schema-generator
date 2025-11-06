@@ -34,11 +34,9 @@ export const videoSchema = {
     },
     duration: {
       label: 'Duration',
-      type: 'Text',
+      type: 'Duration',
       recommended: true,
-      placeholder: 'PT10M30S',
-      help: 'Video duration in ISO 8601 format (e.g., PT10M30S = 10 minutes 30 seconds)',
-      example: 'PT10M30S (10 minutes 30 seconds)'
+      help: 'Total length of the video'
     },
     contentUrl: {
       label: 'Video URL',

@@ -28,11 +28,9 @@ export const howToSchema = {
     },
     totalTime: {
       label: 'Total Time',
-      type: 'Text',
+      type: 'Duration',
       recommended: true,
-      placeholder: 'PT30M',
-      help: 'Total time needed in ISO 8601 format (e.g., PT30M = 30 minutes)',
-      example: 'PT30M (30 minutes)'
+      help: 'Total time needed to complete the tutorial'
     },
     estimatedCost: {
       label: 'Estimated Cost',
