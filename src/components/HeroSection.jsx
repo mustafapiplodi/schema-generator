@@ -31,19 +31,6 @@ export function HeroSection({ onGetStarted }) {
             <li>
               <ChevronRight className="w-4 h-4" />
             </li>
-            <li>
-              <a
-                href="https://www.scalinghigh.com/tools"
-                className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Tools
-              </a>
-            </li>
-            <li>
-              <ChevronRight className="w-4 h-4" />
-            </li>
             <li className="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">
               Schema Markup Generator
             </li>

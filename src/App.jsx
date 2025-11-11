@@ -263,16 +263,29 @@ function AppContent() {
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                 Generate valid JSON-LD structured data for SEO. Free, fast, and reliable tool for creating Schema.org markup.
               </p>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
-                Powered by{' '}
-                <a
-                  href="https://scalinghigh.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-semibold hover:underline"
-                >
-                  Scaling High Technologies
-                </a>
+              <div className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                <div>
+                  Powered by{' '}
+                  <a
+                    href="https://scalinghigh.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-semibold hover:underline"
+                  >
+                    Scaling High Technologies
+                  </a>
+                </div>
+                <div>
+                  Need SEO, Web Development, or Graphic Design?{' '}
+                  <a
+                    href="https://www.scalinghigh.com/contact"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-semibold hover:underline"
+                  >
+                    Get in touch
+                  </a>
+                </div>
               </div>
             </div>
 
